@@ -60,3 +60,47 @@ sizes()[0]
 
 ### 变量函数
 我们可以把函数当作变量传递到新的函数中。
+```stylus
+invoke(a, b, fn)
+  fn(a, b)
+
+add(a, b)
+  a + b
+sub(a, b)
+  a - b
+body
+  padding invoke(5px, 10px, add)
+  margin invoke(5px, 10px, sub)
+```
+
+### 参数
+`arguments`是所有函数体都有的局部变量，包含传递的所有参数。
+```stylus
+sum()
+  n = 0
+  for num in arguments
+    n = n + num
+
+sum(1,2,3,4,5)
+// => 15
+```
+
+### 哈希示例
+
+```stylus
+get(hash, key)
+  return pair[1] if pair[0] == key for pair in hash
+  
+下面例子可以证明，语言函数模样的Stylus表达式具有更大的灵活性。
+hash = (one 1) (two 2) (three 3)
+
+get(hash, two)
+// => 2
+
+get(hash, three)
+// => 3
+
+get(hash, something)
+// => null
+
+```

@@ -24,6 +24,23 @@ add(a, b)
   a + b
 sub(a, b)
   a - b
+
+sum()
+  n = 0
+  for num in arguments
+    n = n + num
+    unit(n, 'px')
+
+hash = (one 1) (two 2) (three 3)
+
+get(hash, key)
+  // return pair[1] if pair[0] == key for pair in hash
+  for pair in hash
+    if pair[0] == key
+      return pair[1]
 body
   padding invoke(5px, 10px, add)
   margin invoke(5px, 10px, sub)
+  width sum(1, 2, 3, 4, 5)
+  height get(hash, two)
+  background-color red(#c00)
