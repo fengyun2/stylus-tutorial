@@ -2,7 +2,7 @@
  * @Author: fengyun2
  * @Date:   2016-07-26 09:38:36
  * @Last Modified by:   fengyun2
- * @Last Modified time: 2016-07-26 09:50:41
+ * @Last Modified time: 2016-07-26 09:58:16
  */
 
 'use strict';
@@ -39,7 +39,7 @@ gulp.task('stylus', function() {
     .pipe(gulp.dest(buildSrc));
 });
 
-gulp.task('default', ['clean', 'stylus', 'watch']);
+gulp.task('default', ['stylus', 'watch']);
 
 //监听任务
 gulp.task('watch', function() {
