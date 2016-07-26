@@ -1,0 +1,59 @@
+/*add(a, b)
+  if a is a 'uint' and b is a 'unit'
+    a + b
+  else
+    (error 'a 和 b 必须是 units!')
+
+body
+  padding add(1, 5)
+
+  padding add(1, 5)[0]*/
+
+table
+  for row in 1...5
+    tr:nth-child({row})
+      height: 10px * row
+
+// 下面都是为了展示而乱来的...
+body {
+  width 15px - 5px
+  height 5s - 2ms
+  content "foo " + "bar"
+  top "num " + 15
+}
+
+nums = 1 2 3
+words = foo bar baz
+vals = (error 'one') (error 'two')
+
+.logo {
+  timer 2000ms + 1s * 5
+  height (5s/3)
+  width 2**8
+  h #fff is a 'rgba' and 15 is a 'unit'
+  w 5 in nums
+  font-family Bar in words
+  errors (error 'two') in vals
+}
+
+pad(types = padding, n = 5px)
+  if padding in types
+    padding n
+  if margin in types
+    margin n
+
+color = lightgreen
+body
+  pad(margin padding, 10px)
+  color color := white
+  h foo is defined
+
+num = 50px
+body
+  if ohnoes is defined
+    padding 5px
+  margin num ?= 20px
+  n = 5
+  width: (n)rem
+  height: (n + 5)px
+  top: unit(n + 5, '%')
