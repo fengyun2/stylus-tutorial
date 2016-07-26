@@ -1,4 +1,29 @@
-add(a, b = a)
+/*add(a, b = a)
+  a = unit(a, px)
+  b = unit(b, px)
   a + b
+
+sizes()
+  15px 10px*/
+
+swap(a, b)
+  (b a)
+
+stringish(val)
+  if val is a 'string' or val is a 'ident'
+    val
+  else
+    unit(val, 'px')
+
+plus = stringish
+
+invoke(a, b, fn)
+  fn(a, b)
+
+add(a, b)
+  a + b
+sub(a, b)
+  a - b
 body
-  padding add(10px, 4)
+  padding invoke(5px, 10px, add)
+  margin invoke(5px, 10px, sub)
